@@ -20,21 +20,7 @@ Maven
 REST APIs
 JSON
 Zero Trust Architecture Concepts
-Project Structure
-trustapp/
-│
-├── src/main/java/com/trust
-│   ├── controller
-│   │   └── TrustController.java
-│   ├── service
-│   │   ├── TrustService.java
-│   │   └── DirectoryService.java
-│   └── TrustappApplication.java
-│
-├── src/main/resources
-│   └── application.properties
-│
-└── pom.xml
+
 System Workflow
 User activity generates a trust event.
 The Trust Service updates the trust score.
@@ -43,10 +29,12 @@ An external AI prediction service calculates career risk.
 Trust score and career risk are combined.
 Final risk is categorized as:
 Trust Score	Career Risk	Final Risk
+
 < 40	Any	HIGH
 Any	> 60	HIGH
 40 - 69	≤ 60	MEDIUM
 ≥ 70	≤ 60	LOW
+
 API Endpoints
 Update Trust Score
 POST /trust/event/{impact}
